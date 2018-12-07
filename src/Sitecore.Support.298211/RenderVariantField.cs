@@ -19,14 +19,18 @@
             return fallbackField;
           }
           VariantField variantField2 = fallbackField as VariantField;
-          bool flag = variantField2.UseFieldRenderer && PageMode.IsExperienceEditorEditing;
+          #region Removed code
+          //bool flag = variantField2.UseFieldRenderer && PageMode.IsExperienceEditorEditing;
+          #endregion
           Field field = item.Fields[variantField2.FieldName];
           if (field != null)
           {
-            if (flag & isControlEditable)
-            {
-              return variantField2;
-            }
+            #region Removed code
+            //if (flag & isControlEditable)
+            //{
+            //  return variantField2;
+            //}
+            #endregion
             string value = field.GetValue(true);
             if (!string.IsNullOrWhiteSpace(value) && value != "$name")
             {
